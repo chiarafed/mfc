@@ -1,0 +1,80 @@
+<mvc:View xmlns:f="sap.f"
+ controllerName="tileproject.tileproject.controller.DnD" 
+ xmlns:mvc="sap.ui.core.mvc" 
+ displayBlock="true" 
+ xmlns="sap.m" 
+ xmlns:table="sap.ui.table"
+ xmlns:t="sap.m.Table"
+ xmlns:layout="sap.ui.layout"
+ xmlns:form="sap.ui.layout.form" 
+ xmlns:tnt="sap.tnt">
+ 
+    <Page id='DnD' showHeader="false" enableScrolling="true" class="sapUiContentPadding">
+        <content>
+            <HBox renderType="Bare">
+                <mvc:XMLView id="Utenti" viewName="tileproject.tileproject.view.Utenti" async="true" />
+                <VBox justifyContent="Center" class="sapUiTinyMarginBeginEnd">
+                    <Button class="sapUiTinyMarginBottom" icon="sap-icon://navigation-right-arrow" tooltip="Move to selected" press="moveToSelectedProductsTable" />
+                    <Button icon="sap-icon://navigation-left-arrow" tooltip="Move to available" press="moveToAvailableProductsTable" />
+                </VBox>
+                <mvc:XMLView id="UtentiSelezionati" viewName="tileproject.tileproject.view.UtentiSelezionati" async="true" />
+            </HBox>
+        </content>
+        <!-- <Table
+		id="tableass"
+		mode="SingleSelectMaster"
+		growing="true"
+		growingThreshold="10"
+		beforeOpenContextMenu="onBeforeOpenContextMenu"
+		items="{flussiModel>/flussi}"
+        class="sapUiTinyMarginTopBottom"
+        > 
+		
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="Associazioni" id ="Associazioni"/>
+				
+			</OverflowToolbar>
+			
+		</headerToolbar>
+		<columns>
+        <Column>
+				<Text text="Flusso" id="flusso" />
+			</Column>
+			<Column>
+				<Text text="Cognome" id="cognome" />
+			</Column>
+			<Column>
+				<Text text="Nome" id="nome" />
+			</Column>
+			
+		</columns>
+		
+		<items>
+			<ColumnListItem>
+				<cells>
+                    <Text text="{flussiModel>nome}" wrapping="false" />
+					<Text text="{flussiModel>/utenti>cognome}" wrapping="false" />
+					<Text text="Nome" wrapping="false" />
+					
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table> -->
+    </Page>
+
+    <tnt:ToolHeader class="sapUiMediumMarginBottom">
+        <Avatar src="test-resources/sap/tnt/images/Woman_avatar_01.png" displaySize="XS" />
+        <Text text="Welcome Admin" wrapping="false" />
+
+        <!-- <Avatar src="test-resources/sap/tnt/images/Woman_avatar_01.png" displaySize="XS" press=".onAvatarPressed" /> -->
+        <Image src="test-resources/sap/tnt/images/SAP_Logo.png" />
+
+        <ToolbarSpacer />
+        <!-- <Button icon="sap-icon://search" type="Transparent" /> -->
+        <Button icon="sap-icon://task" type="Transparent" press="vaiADnD" />
+        <Button icon="sap-icon://home" type="Transparent" press="vaiHome" />
+
+        <Button icon="sap-icon://grid" type="Transparent" />
+    </tnt:ToolHeader>
+</mvc:View>

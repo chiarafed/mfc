@@ -1,0 +1,65 @@
+<mvc:View height="100%" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tileproject.tileproject.controller.AddUtente" xmlns:semantic="sap.m.semantic" displayBlock="true" xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt">
+    <App>
+        <Page>
+            <headerContent>
+                <ToolbarSpacer />
+                <Button icon="sap-icon://nav-back" type="Transparent" press="goBack" />
+                <Button icon="sap-icon://home" type="Transparent" press="vaiHome" />
+            </headerContent>
+
+            <semantic:DetailPage title="Nuovo Utente" id="detail">
+                <f:SimpleForm
+                    id="SimpleFormDisplay354wide"
+                    editable="false"
+                    layout="ResponsiveGridLayout"
+                    title=""
+                    labelSpanXL="4"
+                    labelSpanL="3"
+                    labelSpanM="4"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="4"
+                    emptySpanM="0"
+                    emptySpanS="0"
+                    columnsXL="2"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                >
+                    <f:content>
+                        <Label text="id" />
+                        <Input id="id" editable="false" />
+
+                        <Label text="cognome" />
+                        <Input id="cognome" />
+
+                        <Label text="nome" />
+                        <Input id="nome" />
+
+                        <Label text="ruolo" />
+                        <Select id="ruolo" forceSelection="false">
+                            <core:Item key="Admin" text="Admin" />
+                            <core:Item key="Technical" text="Technical" />
+                            <core:Item key="Consumer" text="Consumer" />
+                        </Select>
+
+                        <Label text="email" />
+                        <Input id="email" />
+
+                        <Label text="telefono" />
+                        <Input id="telefono" />
+                    </f:content>
+                </f:SimpleForm>
+
+                <semantic:customFooterContent>
+                    <OverflowToolbarButton icon="sap-icon://refresh" id="refreshBtn" press="refresh" />
+
+                    <OverflowToolbarButton icon="sap-icon://save" id="exitBtn" press="exit" />
+
+                    <OverflowToolbarButton icon="sap-icon://add" id="addBtn" press="add" />
+                </semantic:customFooterContent>
+            </semantic:DetailPage>
+        </Page>
+    </App>
+</mvc:View>
